@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:parkit02/pages/new_parking_space.dart';
+import 'package:parkit02/pages/view_parking_slots.dart';
 import 'active_users.dart';
 import 'past_users.dart';
 import 'new_users.dart';
@@ -165,6 +167,20 @@ class _HomePageState extends State<HomePage> {
               title: const Text('Past Users'),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => const PastUsersPage()));
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.square, color: Colors.deepPurple),
+              title: const Text('New Parking Slot'),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) =>  NewParkingSpace()));
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.list, color: Colors.deepPurple), // New ListTile
+              title: const Text('View Parking Slots'),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => ViewParkingSlots()));
               },
             ),
           ],
